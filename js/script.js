@@ -1,5 +1,20 @@
-function Pizza(cost){
- this.cost = cost
+function Pizza(quantity, pizzaSize, cost){
+  this.pizzaSize = pizzaSize;
+  this.quantity = quantity;
+  this.cost = cost;
+
+  if(pizzaSize === "small"){
+    this.cost += 10;
+  }else if(pizzaSize === "medium"){
+    this.cost += 13;
+  }else{
+    this.cost += 18;
+  };
+
+  if(quantity > 1){
+    var newCost = this.cost * quantity;
+    this.cost = newCost;
+  };
 
 }
 
