@@ -10,13 +10,13 @@ function Pizza(quantity, pizzaSize, cost){
   }else{
     this.cost += 18;
   };
+
 }
 
 Pizza.prototype.addQuantity = function(quantityAdded){
   this.quantity = quantityAdded
-
-  var newCost = this.cost * quantityAdded
-  this.cost = newCost
+  var quantityCost = this.cost * this.quantity
+  this.cost = quantityCost
 }
 
 Pizza.prototype.addThree = function(quantityThree){
@@ -36,15 +36,15 @@ var totalTopping = quantityOne;
 };
 
 Pizza.prototype.removeOne = function(){
-
+  this.cost -= 1;
 };
 
 Pizza.prototype.removeTwo = function(){
-
+  this.cost -= 2;
 };
 
 Pizza.prototype.removeThree = function(){
-
+  this.cost -= 3;
 };
 
 var hideMeats = function(){
@@ -88,9 +88,9 @@ $(document).ready(function(){
   $(".size-form").submit(function(event){
     event.preventDefault();
     var sizePizza = $(".size-options").val();
-    newPizza = new Pizza(1, sizePizza, 0, [], [], [])
+    newPizza = new Pizza(1, sizePizza, 0)
 
-    $(".pizza-size").text(sizePizza + " Pizza")
+    $(".pizza-size").text(newPizza.quantity + " " + sizePizza + " Pizza")
 
     $(".pizza-cost").text("$"+newPizza.cost)
     $(".toppings-order-row").fadeIn();
@@ -196,6 +196,15 @@ $(document).ready(function(){
   $(".other-click4").click(function(){
     var toppingName= $(".other-click4").attr('id');
     addOther(toppingName);
+  });
+
+  $(".quantity-form").submit(function(event){
+    event.preventDefault();
+    $(".quantity-form").hide();
+    var quantityOfPizzas = parseInt($(".quantity").val());
+    newPizza.addQuantity(quantityOfPizzas);
+    $(".pizza-cost").text("$"+newPizza.cost);
+    $(".pizza-size").text(newPizza.quantity + " " + newPizza.pizzaSize + " Pizza")
   });
 
 

@@ -33,15 +33,32 @@ describe("Pizza", function(){
   });
 
 
-  // it("will remove 3 dollar toppings", function(){
-  //   var newPizza = new Pizza(1, "small", 0, [], [], []);
-  //   newPizza.addThree(3, "sausage");
-  //   expect(newPizza.cost).to.equal(19);
-  //   newPizza.removeThree("sausage");
-  //   expect(newPizza.toppings3).to.eql(["sausage", "sausage"]);
-  //   expect(newPizza.cost).to.equal(19);
-  //
-  // });
+  it("will remove 3 dollar toppings", function(){
+    var newPizza = new Pizza(1, "Small", 0);
+    newPizza.addThree(3);
+    expect(newPizza.cost).to.equal(19);
+    newPizza.removeThree();
+    expect(newPizza.cost).to.equal(16);
+
+  });
+
+  it("will remove 2 dollar toppings", function(){
+    var newPizza = new Pizza(1, "Small", 0);
+    newPizza.addTwo(1);
+    expect(newPizza.cost).to.equal(12);
+    newPizza.removeTwo();
+    expect(newPizza.cost).to.equal(10);
+
+  });
+
+  it("will remove 1 dollar toppings", function(){
+    var newPizza = new Pizza(1, "Small", 0);
+    newPizza.addOne(1);
+    expect(newPizza.cost).to.equal(11);
+    newPizza.removeOne();
+    expect(newPizza.cost).to.equal(10);
+
+  });
 
 
 
