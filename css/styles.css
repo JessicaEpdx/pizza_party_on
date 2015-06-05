@@ -29,7 +29,7 @@ body{
 
 .topping-title{
   cursor:pointer;
-  font-size:30px;
+  font-size:20px;
   word-spacing: 4px;
 
 }
@@ -102,10 +102,15 @@ svg {
 }
 
 .top-options img{
-  width:100px;
+  width:60px;
   cursor:pointer;
   margin:5px;
   padding:0;
+}
+
+.arrow{
+  width:10px;
+
 }
 
 @media (max-width: 1000px){
