@@ -1,7 +1,10 @@
-function Pizza(quantity, pizzaSize, cost){
+function Pizza(quantity, pizzaSize, cost, toppings1, toppings2, toppings3){
   this.pizzaSize = pizzaSize;
   this.quantity = quantity;
   this.cost = cost;
+  this.toppings1 = toppings1;
+  this.toppings2 = toppings2;
+  this.toppings3 = toppings3;
 
   if(pizzaSize === "small"){
     this.cost += 10;
@@ -10,44 +13,35 @@ function Pizza(quantity, pizzaSize, cost){
   }else{
     this.cost += 18;
   };
-
-  if(quantity > 1){
-    var newCost = this.cost * quantity;
-    this.cost = newCost;
-  };
 }
 
-Pizza.prototype.addToppings = function(whiteSauce, extraCheese, pepperoni, sausage, ham, mushroom, spinach, pineapple, bellPepper){
-  // var meats = [pepperoni, sausage, ham];
-  // var veggies = [mushroom, spinach, pineapple, bellPepper];
-  // var otherToppings = [whiteSauce, extraCheese];
-  //
-  // meats.forEach(function(meat){
-  //   this.meat = meat * 3;
-  //   this.cost += this.meat;
-  // });
-  //
-  // veggies.forEach(function(veggie){
-  //   this.veggie = veggie * 2;
-  //   this.cost += this.veggie;
-  // });
-  //
-  // otherToppings.forEach(function(otherTopping){
-  //   this.otherTopping = otherTopping;
-  //   this.cost += this.otherTopping;
-  // });
-  //
-  this.whiteSauce = whiteSauce;
-  this.extraCheese = extraCheese;
-  this.pepperoni = pepperoni * 3;
-  this.sausage = sausage * 3;
-  this.ham = ham * 3;
-  this.mushroom = mushroom * 2;
-  this.spinach = spinach * 2;
-  this.pineapple = pineapple * 2;
-  this.bellPepper = bellPepper * 2;
+Pizza.prototype.addQuantity = function(quantityAdded){
+  this.quantity = quantityAdded
 
-  this.cost += (this.whiteSauce + this.extraCheese + this.pepperoni + this.sausage + this.ham + this.mushroom + this.spinach + this.pineapple + this.bellPepper);
+  var newCost = this.cost * quantityAdded
+  this.cost = newCost
+}
+
+Pizza.prototype.addThree = function(quantityThree, nameThree){
+  this.toppings3.push(nameThree);
+
+  var totalTopping = quantityThree * 3;
+  this.cost += totalTopping;
+};
+
+
+Pizza.prototype.addTwo = function(quantityTwo, nameTwo){
+  this.toppings2.push(nameTwo);
+
+  var totalTopping = quantityTwo * 2;
+  this.cost += totalTopping;
+};
+
+Pizza.prototype.addOne = function(quantityOne, nameOne){
+  this.toppings1.push(nameOne);
+
+  var totalTopping = quantityOne;
+  this.cost += totalTopping;
 };
 
 var hideMeats = function(){
@@ -74,6 +68,9 @@ var showOthers = function(){
   $(".others").slideDown();
 };
 
+
+
+
 $(document).ready(function(){
 
   hideMeats();
@@ -99,12 +96,9 @@ $(document).ready(function(){
     showOthers();
     hideVeggies();
     hideMeats();
-
-
-
-
-
   });
+
+
 
 
 
