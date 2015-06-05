@@ -13,13 +13,7 @@ describe("Pizza", function(){
     expect(newPizza.cost).to.equal(20);
   });
 
-  it("will add 3 dollars to total cost for each meat topping", function(){
-    var newPizza = new Pizza(1, "small", 0);
-    newPizza.addToppings(0, 0, 1, 2, 0, 0, 0, 0, 0)
-    expect(newPizza.cost).to.equal(19);
-  });
-
-  it("will add 1 dollar to total cost for each white sauce or extra cheese purchase", function(){
+  it("will add 1 dollar to total cost for white sauce and extra cheese", function(){
     var newPizza = new Pizza(1, "small", 0);
     newPizza.addToppings(1, 1, 0, 0, 0, 0, 0, 0, 0)
     expect(newPizza.cost).to.equal(12);
@@ -30,6 +24,14 @@ describe("Pizza", function(){
     newPizza.addToppings(1, 1, 0, 0, 0, 0, 0, 0, 0)
     expect(newPizza.cost).to.equal(12);
   });
+
+  it("will add 3 dollars to total cost for each meat topping", function(){
+    var newPizza = new Pizza(1, "small", 0);
+    newPizza.addToppings(0, 0, 1, 2, 0, 0, 0, 0, 0)
+    expect(newPizza.cost).to.equal(19);
+  });
+
+  
 
 
 });

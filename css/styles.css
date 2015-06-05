@@ -1,0 +1,16 @@
+body{
+  text-align:center;
+}
+
+.row{
+  margin:15px;
+}
+
+.title-logo{
+  font-size:60px;
+  font-family:indie flower;
+}
+
+.logo{
+  width:120px;
+}

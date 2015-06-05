@@ -15,10 +15,28 @@ function Pizza(quantity, pizzaSize, cost){
     var newCost = this.cost * quantity;
     this.cost = newCost;
   };
-
 }
 
 Pizza.prototype.addToppings = function(whiteSauce, extraCheese, pepperoni, sausage, ham, mushroom, spinach, pineapple, bellPepper){
+  // var meats = [pepperoni, sausage, ham];
+  // var veggies = [mushroom, spinach, pineapple, bellPepper];
+  // var otherToppings = [whiteSauce, extraCheese];
+  //
+  // meats.forEach(function(meat){
+  //   this.meat = meat * 3;
+  //   this.cost += this.meat;
+  // });
+  //
+  // veggies.forEach(function(veggie){
+  //   this.veggie = veggie * 2;
+  //   this.cost += this.veggie;
+  // });
+  //
+  // otherToppings.forEach(function(otherTopping){
+  //   this.otherTopping = otherTopping;
+  //   this.cost += this.otherTopping;
+  // });
+  //
   this.whiteSauce = whiteSauce;
   this.extraCheese = extraCheese;
   this.pepperoni = pepperoni * 3;
@@ -30,5 +48,13 @@ Pizza.prototype.addToppings = function(whiteSauce, extraCheese, pepperoni, sausa
   this.bellPepper = bellPepper * 2;
 
   this.cost += (this.whiteSauce + this.extraCheese + this.pepperoni + this.sausage + this.ham + this.mushroom + this.spinach + this.pineapple + this.bellPepper);
-
 };
+
+$(document).ready(function(){
+
+  
+
+
+
+
+});
