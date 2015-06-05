@@ -122,22 +122,23 @@ $(document).ready(function(){
   }
 
   $(".meat-click1").click(function(){
-    var toppingName= $(".meat-click1").val();
+    var toppingName= $(".meat-click1").attr('id');
+    console.log(toppingName);
     addMeat(toppingName);
   })
 
   $(".meat-click2").click(function(){
-    var toppingName= $(".meat-click2").val();
+    var toppingName= $(".meat-click2").attr('id');
     addMeat(toppingName);
   })
 
   $(".meat-click3").click(function(){
-    var toppingName= $(".meat-click3").val();
+    var toppingName= $(".meat-click3").attr('id');
     addMeat(toppingName);
   })
 
   $(".meat-click4").click(function(){
-    var toppingName= $(".meat-click4").val();
+    var toppingName= $(".meat-click4").attr('id');
     addMeat(toppingName);
   })
 
@@ -148,22 +149,22 @@ $(document).ready(function(){
   }
 
   $(".veggie-click1").click(function(){
-    var toppingName= $(".veggie-click1").val();
+    var toppingName= $(".veggie-click1").attr('id');
     addVeggie(toppingName);
   })
 
   $(".veggie-click2").click(function(){
-    var toppingName= $(".veggie-click2").val();
+    var toppingName= $(".veggie-click2").attr('id');
     addVeggie(toppingName);
   })
 
   $(".veggie-click3").click(function(){
-    var toppingName= $(".veggie-click3").val();
+    var toppingName= $(".veggie-click3").attr('id');
     addVeggie(toppingName);
   })
 
   $(".veggie-click4").click(function(){
-    var toppingName= $(".veggie-click4").val();
+    var toppingName= $(".veggie-click4").attr('id');
     addVeggie(toppingName);
   })
 
