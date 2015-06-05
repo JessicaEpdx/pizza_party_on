@@ -52,6 +52,27 @@ svg {
   text-transform: uppercase;
 }
 
+.veggie-text {
+  fill: url("#p-veggie");
+  stroke: black;
+  stroke-width: 7;
+  stroke-opacity:.5;
+}
+
+
+.veggie-content {
+  font: 100 10em/1 Impact;
+  margin:20px;
+}
+
+
+
+
+
+
+
+
+
 @media (max-width: 1200px){
   svg{
     width:90px;
