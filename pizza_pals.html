@@ -8,6 +8,8 @@
   <link rel="stylesheet"  href="css/styles.css" />
   <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Megrim' rel='stylesheet' type='text/css'>
 
   <script src='js/jquery-1.11.3.min.js'></script>
   <script src='js/script.js'></script>
@@ -17,21 +19,22 @@
 
   <div class="container">
 
+<!-- FIRST ROWS WITH NAME AND LOGOS -->
     <div class="row">
       <div class="col-sm-12 title-logo">
         <img class="logo" src="images/PizzaLogo.jpg" />
-        Pizza Pals
+        Pizza Party On
         <img class="logo" src="images/PizzaLogo2.jpg" />
 
       </div>
     </div>
 
     <div class="row">
-      <div class="col-sm-6 directions">
-        Directions for ordering here
-      </div>
 
-      <div class="col-sm-6 size">
+      <div class="col-sm-12">
+        <div class="directions">
+          Directions for ordering here
+        </div>
         <form class="size-form">
           <label for="size">What Size Pizza Would you like?</label>
           <select class="size-options">
@@ -44,9 +47,15 @@
       </div>
     </div>
 
+
+
+
+<!-- ADD TOPPINGS STARTS HERE -->
     <div class="row toppings-order-row">
 
 
+
+<!-- MEAT SECTION START -->
       <div class="col-sm-3 add-toppings">
 
         <div class="toppings">
@@ -94,17 +103,22 @@
         </div>
         </div>
       </div>
+<!-- MEAT SECTION END -->
 
 
 
 
 
+
+
+
+<!-- VEGGIE SECTION START -->
       <div class="col-sm-3 add-toppings">
 
         <div class="toppings">
 <!-- ADD VEGGIE TITLE -->
           <div class="topping-title veggie">
-            Veggies
+            Add Veggies
           </div>
 <!-- VEGGIE GIF AND VEGGIE OPTIONS -->
 
@@ -145,18 +159,20 @@
         <option class="veggie-click4" value="Mushroom">Mushroom</option>
           </div>
         </div>
-        </div>
+      </div>
+<!-- VEGGIE SECTION END -->
 
 
 
 
 
+<!-- OTHER SECTION START -->
         <div class="col-sm-3 add-toppings">
 
           <div class="toppings">
 <!-- ADD OTHER TITLE -->
             <div class="topping-title other">
-            Others
+            Add Other Toppings
             </div>
 <!-- OTHER GIF AND OTHER OPTIONS -->
 
@@ -191,17 +207,6 @@
           </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
           <option class="other-click1" value="Extra-Cheese">Extra Cheese</option>
           <option class="other-click2" value="White-Sauce">White Sauce</option>
           <option class="other-click3" value="Pesto">Pesto</option>
@@ -209,13 +214,12 @@
             </div>
           </div>
         </div>
+<!-- OTHER SECTION END -->
 
 
 
 
-
-
-
+<!-- ORDER SECTION START -->
       <div class="col-sm-3 order">
         <div class="order-list-div">
           <h3 class="pizza-size"></h3>
@@ -228,6 +232,9 @@
 
 
     </div>
+<!-- ORDER SECTION END -->
+
+
 
   </div>
 

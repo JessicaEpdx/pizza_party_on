@@ -9,12 +9,12 @@ body{
 }
 
 .container{
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: questrial, sans-serif;
   font-weight: 300;
 }
 .title-logo{
   font-size:80px;
-  font-family:shadows into light;
+  font-family:Megrim;
 }
 
 .logo{
@@ -25,9 +25,19 @@ body{
   margin:10px;
 }
 
-/*.topping-title{
-  font-size:20px;
-}*/
+.topping-title{
+  cursor:pointer;
+
+}
+
+
+
+
+
+
+
+
+
 
 .meat-text {
   fill: url("#p-meat");
@@ -79,7 +89,7 @@ svg {
 .total{
   font-size:30px;
   border-bottom:1px solid black;
-  
+
 }
 
 

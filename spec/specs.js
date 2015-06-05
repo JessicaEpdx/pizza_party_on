@@ -36,6 +36,17 @@ describe("Pizza", function(){
   });
 
 
+  // it("will remove 3 dollar toppings", function(){
+  //   var newPizza = new Pizza(1, "small", 0, [], [], []);
+  //   newPizza.addThree(3, "sausage");
+  //   expect(newPizza.cost).to.equal(19);
+  //   newPizza.removeThree("sausage");
+  //   expect(newPizza.toppings3).to.eql(["sausage", "sausage"]);
+  //   expect(newPizza.cost).to.equal(19);
+  //
+  // });
+
+
 
 
 });

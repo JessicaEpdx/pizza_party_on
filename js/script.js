@@ -79,6 +79,7 @@ $(document).ready(function(){
   hideOthers();
 
   var newPizza = undefined
+  $(".directions").hide();
 
   $(".size-form").submit(function(event){
     event.preventDefault();
@@ -89,8 +90,8 @@ $(document).ready(function(){
 
     $(".pizza-cost").text("$"+newPizza.cost)
     $(".toppings-order-row").fadeIn();
-    $(".size").hide();
-
+    $(".size-form").hide();
+    $(".directions").show();
   });
 
 
