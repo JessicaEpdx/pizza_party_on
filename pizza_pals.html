@@ -6,7 +6,7 @@
   <title></title>
   <link rel="stylesheet" href="css/lib/normalize.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet"  href="css/styles.css" />
   <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
 
@@ -28,40 +28,127 @@
     </div>
 
     <div class="row">
+      <div class="col-sm-12 directions">
+        Directions for ordering here
+      </div>
+    </div>
 
-      <div class="col-sm-7 add-toppings">
+    <div class="row toppings-order-row">
+
+
+      <div class="col-sm-3 add-toppings">
 
         <div class="toppings">
+<!-- ADD MEAT TITLE -->
           <div class="topping-title meat">
             Add Meat
           </div>
+<!-- MEAT GIF AND MEAT OPTIONS -->
           <div class="meats">
-            List of meats
-          </div>
+
+          <div class="meat-content">
+            <svg viewBox="0 0 300 200">
+
+            <!-- Pattern -->
+            <pattern
+            id="p-meat"
+            viewBox="30 100 186 200"
+            patternUnits="userSpaceOnUse"
+            width="216" height="200"
+            x="-70" y="35">
+
+            <!-- Meat Image -->
+            <image xlink:href="images/meat.gif" width="256" height="300"/>
+            </pattern>
+
+            <!-- Text -->
+            <text class="meat-text" text-anchor="middle"
+            x="50%"
+            y="50%"
+            dy=".35em"
+            class="text"
+            >
+            Meat
+            </text>
+          </svg>
+
+      </div>
+
+
+          List of meat
         </div>
+        </div>
+      </div>
+
+
+
+
+
+      <div class="col-sm-3 add-toppings">
 
         <div class="toppings">
           <div class="topping-title veggie">
-            Add veggies
+            Veggies
           </div>
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
           <div class="veggies">
             List of veggies
           </div>
         </div>
 
-        <div class="toppings">
-          <div class="topping-title other">
-            Add Other Toppings
+
+
+
+
+        <div class="col-sm-3 add-toppings">
+
+          <div class="toppings">
+            <div class="topping-title other">
+              Other
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           </div>
+
+
           <div class="others">
-            List of other topping
+            List of others
           </div>
         </div>
 
 
-      </div>
 
-      <div class="col-sm-5 order">
+
+
+
+
+      <div class="col-sm-3 order">
         Order
       </div>
 

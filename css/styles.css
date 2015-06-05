@@ -1,11 +1,17 @@
 body{
   text-align:center;
+  height: 100%;
+
 }
 
 .row{
   margin:15px;
 }
 
+.container{
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}
 .title-logo{
   font-size:80px;
   font-family:shadows into light;
@@ -17,4 +23,37 @@ body{
 
 .toppings{
   margin:10px;
+}
+
+/*.topping-title{
+  font-size:20px;
+}*/
+
+.meat-text {
+  fill: url("#p-meat");
+  stroke: black;
+  stroke-width: 7;
+  stroke-opacity:.5;
+}
+
+  /* Other stuff */
+html,
+
+.meat-content {
+  font: 100 10em/1 Impact;
+  margin:20px;
+}
+
+svg {
+  text-align:center;
+  width:120px;
+  margin: 0 auto;
+  display: block;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1200px){
+  svg{
+    width:90px;
+  }
 }

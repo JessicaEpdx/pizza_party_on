@@ -51,15 +51,15 @@ Pizza.prototype.addToppings = function(whiteSauce, extraCheese, pepperoni, sausa
 };
 
 var hideMeats = function(){
-  $(".meats").hide();
+  $(".meats").fadeOut("fast");
 };
 
 var hideVeggies = function(){
-  $(".veggies").hide();
+  $(".veggies").fadeOut("fast");
 };
 
 var hideOthers = function(){
-  $(".others").hide();
+  $(".others").fadeOut("fast");
 };
 
 var showMeats = function(){
@@ -99,6 +99,10 @@ $(document).ready(function(){
     showOthers();
     hideVeggies();
     hideMeats();
+
+
+
+
 
   });
 
