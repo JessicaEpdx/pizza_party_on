@@ -17,6 +17,7 @@ body{
 .title-logo{
   font-size:80px;
   font-family:Megrim;
+  border-bottom:4px solid darkgrey;
 }
 
 .logo{
@@ -68,7 +69,7 @@ svg {
   margin: 0 auto;
   display: block;
   text-transform: uppercase;
-  border-bottom:2px solid black;
+  border-bottom:2px dotted darkorange;
 }
 
 .veggie-text {

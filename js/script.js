@@ -175,22 +175,22 @@ $(document).ready(function(){
   }
 
   $(".other-click1").click(function(){
-    var toppingName= $(".other-click1").val();
+    var toppingName= $(".other-click1").attr('id');
     addOther(toppingName);
   })
 
   $(".other-click2").click(function(){
-    var toppingName= $(".other-click2").val();
+    var toppingName= $(".other-click2").attr('id');
     addOther(toppingName);
   })
 
   $(".other-click3").click(function(){
-    var toppingName= $(".other-click3").val();
+    var toppingName= $(".other-click3").attr('id');
     addOther(toppingName);
   })
 
   $(".other-click4").click(function(){
-    var toppingName= $(".other-click4").val();
+    var toppingName= $(".other-click4").attr('id');
     addOther(toppingName);
   })
 
