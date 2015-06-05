@@ -85,15 +85,9 @@ $(document).ready(function(){
     var sizePizza = $(".size-options").val();
     newPizza = new Pizza(1, sizePizza, 0, [], [], [])
 
-    if(sizePizza === "small"){
-      $(".pizza-size").text(sizePizza + " pizza $10")
-    }else if (sizePizza === "medium"){
-      $(".pizza-size").text(sizePizza + " pizza $13")
-    }else{
-      $(".pizza-size").text(sizePizza + " pizza $18")
-    };
+    $(".pizza-size").text(sizePizza + " pizza!")
 
-    $(".pizza-cost").text("$ "+newPizza.cost)
+    $(".pizza-cost").text("$"+newPizza.cost)
     $(".toppings-order-row").fadeIn();
     $(".size").hide();
 
@@ -122,7 +116,7 @@ $(document).ready(function(){
 
   var addMeat = function(toppingName){
     newPizza.addThree(1, toppingName);
-    $(".pizza-cost").text("$ "+newPizza.cost);
+    $(".pizza-cost").text("$"+newPizza.cost);
     $(".order-list").append("<li>" + toppingName + " $3</li>");
   }
 
@@ -146,7 +140,57 @@ $(document).ready(function(){
     addMeat(toppingName);
   })
 
+  var addVeggie = function(toppingName){
+    newPizza.addTwo(1, toppingName);
+    $(".pizza-cost").text("$"+newPizza.cost);
+    $(".order-list").append("<li>" + toppingName + " $2</li>");
+  }
 
+  $(".veggie-click1").click(function(){
+    var toppingName= $(".veggie-click1").val();
+    addVeggie(toppingName);
+  })
+
+  $(".veggie-click2").click(function(){
+    var toppingName= $(".veggie-click2").val();
+    addVeggie(toppingName);
+  })
+
+  $(".veggie-click3").click(function(){
+    var toppingName= $(".veggie-click3").val();
+    addVeggie(toppingName);
+  })
+
+  $(".veggie-click4").click(function(){
+    var toppingName= $(".veggie-click4").val();
+    addVeggie(toppingName);
+  })
+
+  var addOther = function(toppingName){
+    newPizza.addOne(1, toppingName);
+    $(".pizza-cost").text("$"+newPizza.cost);
+    $(".order-list").append("<li>" + toppingName + " $1</li>");
+  }
+
+  $(".other-click1").click(function(){
+    var toppingName= $(".other-click1").val();
+    addOther(toppingName);
+  })
+
+  $(".other-click2").click(function(){
+    var toppingName= $(".other-click2").val();
+    addOther(toppingName);
+  })
+
+  $(".other-click3").click(function(){
+    var toppingName= $(".other-click3").val();
+    addOther(toppingName);
+  })
+
+  $(".other-click4").click(function(){
+    var toppingName= $(".other-click4").val();
+    addOther(toppingName);
+  })
 
 
 
