@@ -35,15 +35,6 @@ body{
 
 }
 
-
-
-
-
-
-
-
-
-
 .meat-text {
   fill: url("#p-meat");
   stroke: black;
@@ -99,6 +90,7 @@ svg {
 .total{
   font-size:30px;
   border-bottom:1px solid black;
+  color:darkred;
 
 }
 

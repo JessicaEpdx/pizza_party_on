@@ -1,10 +1,7 @@
-function Pizza(quantity, pizzaSize, cost, toppings1, toppings2, toppings3){
+function Pizza(quantity, pizzaSize, cost){
   this.pizzaSize = pizzaSize;
   this.quantity = quantity;
   this.cost = cost;
-  this.toppings1 = toppings1;
-  this.toppings2 = toppings2;
-  this.toppings3 = toppings3;
 
   if(pizzaSize === "Small"){
     this.cost += 10;
@@ -22,26 +19,32 @@ Pizza.prototype.addQuantity = function(quantityAdded){
   this.cost = newCost
 }
 
-Pizza.prototype.addThree = function(quantityThree, nameThree){
-  this.toppings3.push(nameThree);
-
+Pizza.prototype.addThree = function(quantityThree){
   var totalTopping = quantityThree * 3;
   this.cost += totalTopping;
 };
 
 
-Pizza.prototype.addTwo = function(quantityTwo, nameTwo){
-  this.toppings2.push(nameTwo);
-
+Pizza.prototype.addTwo = function(quantityTwo){
   var totalTopping = quantityTwo * 2;
   this.cost += totalTopping;
 };
 
-Pizza.prototype.addOne = function(quantityOne, nameOne){
-  this.toppings1.push(nameOne);
-
-  var totalTopping = quantityOne;
+Pizza.prototype.addOne = function(quantityOne){
+var totalTopping = quantityOne;
   this.cost += totalTopping;
+};
+
+Pizza.prototype.removeOne = function(){
+
+};
+
+Pizza.prototype.removeTwo = function(){
+
+};
+
+Pizza.prototype.removeThree = function(){
+
 };
 
 var hideMeats = function(){
@@ -74,12 +77,13 @@ var showOthers = function(){
 $(document).ready(function(){
 
   $(".toppings-order-row").hide();
+  $(".directions").hide();
+
   hideMeats();
   hideVeggies();
   hideOthers();
 
   var newPizza = undefined
-  $(".directions").hide();
 
   $(".size-form").submit(function(event){
     event.preventDefault();
@@ -119,80 +123,80 @@ $(document).ready(function(){
     newPizza.addThree(1, toppingName);
     $(".pizza-cost").text("$"+newPizza.cost);
     $(".order-list").append("<li>" + toppingName + " $3</li>");
-  }
+  };
 
   $(".meat-click1").click(function(){
     var toppingName= $(".meat-click1").attr('id');
     console.log(toppingName);
     addMeat(toppingName);
-  })
+  });
 
   $(".meat-click2").click(function(){
     var toppingName= $(".meat-click2").attr('id');
     addMeat(toppingName);
-  })
+  });
 
   $(".meat-click3").click(function(){
     var toppingName= $(".meat-click3").attr('id');
     addMeat(toppingName);
-  })
+  });
 
   $(".meat-click4").click(function(){
     var toppingName= $(".meat-click4").attr('id');
     addMeat(toppingName);
-  })
+  });
 
   var addVeggie = function(toppingName){
     newPizza.addTwo(1, toppingName);
     $(".pizza-cost").text("$"+newPizza.cost);
     $(".order-list").append("<li>" + toppingName + " $2</li>");
-  }
+  };
 
   $(".veggie-click1").click(function(){
     var toppingName= $(".veggie-click1").attr('id');
     addVeggie(toppingName);
-  })
+  });
 
   $(".veggie-click2").click(function(){
     var toppingName= $(".veggie-click2").attr('id');
     addVeggie(toppingName);
-  })
+  });
 
   $(".veggie-click3").click(function(){
     var toppingName= $(".veggie-click3").attr('id');
     addVeggie(toppingName);
-  })
+  });
 
   $(".veggie-click4").click(function(){
     var toppingName= $(".veggie-click4").attr('id');
     addVeggie(toppingName);
-  })
+  });
 
   var addOther = function(toppingName){
     newPizza.addOne(1, toppingName);
     $(".pizza-cost").text("$"+newPizza.cost);
     $(".order-list").append("<li>" + toppingName + " $1</li>");
-  }
+  };
 
   $(".other-click1").click(function(){
     var toppingName= $(".other-click1").attr('id');
     addOther(toppingName);
-  })
+  });
 
   $(".other-click2").click(function(){
     var toppingName= $(".other-click2").attr('id');
     addOther(toppingName);
-  })
+  });
 
   $(".other-click3").click(function(){
     var toppingName= $(".other-click3").attr('id');
     addOther(toppingName);
-  })
+  });
 
   $(".other-click4").click(function(){
     var toppingName= $(".other-click4").attr('id');
     addOther(toppingName);
-  })
+  });
 
 
 
