@@ -74,12 +74,25 @@ var showOthers = function(){
 $(document).ready(function(){
 
   $(".toppings-order-row").hide();
+  hideMeats();
+  hideVeggies();
+  hideOthers();
+
+  var newPizza = undefined
 
   $(".size-form").submit(function(event){
     event.preventDefault();
     var sizePizza = $(".size-options").val();
-    var newPizza = new Pizza(1, sizePizza, 0, [], [], [])
-    $(".pizza-size").text(sizePizza + " sized pizza")
+    newPizza = new Pizza(1, sizePizza, 0, [], [], [])
+
+    if(sizePizza === "small"){
+      $(".pizza-size").text(sizePizza + " pizza $10")
+    }else if (sizePizza === "medium"){
+      $(".pizza-size").text(sizePizza + " pizza $13")
+    }else{
+      $(".pizza-size").text(sizePizza + " pizza $18")
+    };
+
     $(".pizza-cost").text("$ "+newPizza.cost)
     $(".toppings-order-row").fadeIn();
     $(".size").hide();
@@ -107,27 +120,36 @@ $(document).ready(function(){
     hideMeats();
   });
 
+  var getToppings3 = function(){
+    var toppingsarray = newPizza.toppings3
+
+    toppingsarray.forEach(function(topping){
+      $(".order-list").append("<li>" + topping + " $3" + "</li>")
+    });
+  };
 
   $(".meat-click1").click(function(){
-    var toppingName= $(".meat-click").val();
-
+    var toppingName= $(".meat-click1").val();
+    newPizza.addThree(1, toppingName);
+    $(".pizza-cost").text("$ "+newPizza.cost)
+    getToppings3();
   })
 
-  $(".meat-click2").click(function(){
-    var toppingName2= $(".meat-click2").val();
-    console.log(toppingName2);
-  })
-
-  $(".meat-click3").click(function(){
-    var toppingName2= $(".meat-click3").val();
-    console.log(toppingName2);
-  })
-
-  $(".meat-click4").click(function(){
-    var toppingName2= $(".meat-click4").val();
-    console.log(toppingName2);
-  })
-
+  // $(".meat-click2").click(function(){
+  //   var toppingName2= $(".meat-click2").val();
+  //   console.log(toppingName2);
+  // })
+  //
+  // $(".meat-click3").click(function(){
+  //   var toppingName2= $(".meat-click3").val();
+  //   console.log(toppingName2);
+  // })
+  //
+  // $(".meat-click4").click(function(){
+  //   var toppingName2= $(".meat-click4").val();
+  //   console.log(toppingName2);
+  // })
+  //
 
 
 
