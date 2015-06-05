@@ -11,6 +11,8 @@ body{
 .container{
   font-family: questrial, sans-serif;
   font-weight: 300;
+  word-spacing: 2.5px;
+
 }
 .title-logo{
   font-size:80px;
@@ -98,7 +100,9 @@ svg {
 
 }
 
-
+option{
+  cursor:pointer;
+}
 
 
 @media (max-width: 1000px){
