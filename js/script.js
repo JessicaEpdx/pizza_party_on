@@ -6,9 +6,9 @@ function Pizza(quantity, pizzaSize, cost, toppings1, toppings2, toppings3){
   this.toppings2 = toppings2;
   this.toppings3 = toppings3;
 
-  if(pizzaSize === "small"){
+  if(pizzaSize === "Small"){
     this.cost += 10;
-  }else if(pizzaSize === "medium"){
+  }else if(pizzaSize === "Medium"){
     this.cost += 13;
   }else{
     this.cost += 18;
@@ -86,7 +86,7 @@ $(document).ready(function(){
     var sizePizza = $(".size-options").val();
     newPizza = new Pizza(1, sizePizza, 0, [], [], [])
 
-    $(".pizza-size").text(sizePizza + " pizza!")
+    $(".pizza-size").text(sizePizza + " Pizza")
 
     $(".pizza-cost").text("$"+newPizza.cost)
     $(".toppings-order-row").fadeIn();
