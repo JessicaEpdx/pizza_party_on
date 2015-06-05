@@ -120,36 +120,33 @@ $(document).ready(function(){
     hideMeats();
   });
 
-  var getToppings3 = function(){
-    var toppingsarray = newPizza.toppings3
-
-    toppingsarray.forEach(function(topping){
-      $(".order-list").append("<li>" + topping + " $3" + "</li>")
-    });
-  };
+  var addMeat = function(toppingName){
+    newPizza.addThree(1, toppingName);
+    $(".pizza-cost").text("$ "+newPizza.cost);
+    $(".order-list").append("<li>" + toppingName + " $3</li>");
+  }
 
   $(".meat-click1").click(function(){
     var toppingName= $(".meat-click1").val();
-    newPizza.addThree(1, toppingName);
-    $(".pizza-cost").text("$ "+newPizza.cost)
-    getToppings3();
+    addMeat(toppingName);
   })
 
-  // $(".meat-click2").click(function(){
-  //   var toppingName2= $(".meat-click2").val();
-  //   console.log(toppingName2);
-  // })
-  //
-  // $(".meat-click3").click(function(){
-  //   var toppingName2= $(".meat-click3").val();
-  //   console.log(toppingName2);
-  // })
-  //
-  // $(".meat-click4").click(function(){
-  //   var toppingName2= $(".meat-click4").val();
-  //   console.log(toppingName2);
-  // })
-  //
+  $(".meat-click2").click(function(){
+    var toppingName= $(".meat-click2").val();
+    addMeat(toppingName);
+  })
+
+  $(".meat-click3").click(function(){
+    var toppingName= $(".meat-click3").val();
+    addMeat(toppingName);
+  })
+
+  $(".meat-click4").click(function(){
+    var toppingName= $(".meat-click4").val();
+    addMeat(toppingName);
+  })
+
+
 
 
 
