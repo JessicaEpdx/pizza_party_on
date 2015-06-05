@@ -82,7 +82,7 @@ $(document).ready(function(){
     $(".pizza-size").text(sizePizza + " sized pizza")
     $(".pizza-cost").text("$ "+newPizza.cost)
     $(".toppings-order-row").fadeIn();
-
+    $(".size").hide();
 
   });
 
