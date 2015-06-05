@@ -73,9 +73,18 @@ var showOthers = function(){
 
 $(document).ready(function(){
 
-  hideMeats();
-  hideVeggies();
-  hideOthers();
+  $(".toppings-order-row").hide();
+
+  $(".size-form").submit(function(event){
+    event.preventDefault();
+    var sizePizza = $(".size-options").val();
+    var newPizza = new Pizza(1, sizePizza, 0, [], [], [])
+    $(".pizza-size").text(sizePizza + " sized pizza")
+    $(".pizza-cost").text("$ "+newPizza.cost)
+    $(".toppings-order-row").fadeIn();
+
+
+  });
 
 
   $(".meat").click(function(){
@@ -98,6 +107,26 @@ $(document).ready(function(){
     hideMeats();
   });
 
+
+  $(".meat-click1").click(function(){
+    var toppingName= $(".meat-click").val();
+
+  })
+
+  $(".meat-click2").click(function(){
+    var toppingName2= $(".meat-click2").val();
+    console.log(toppingName2);
+  })
+
+  $(".meat-click3").click(function(){
+    var toppingName2= $(".meat-click3").val();
+    console.log(toppingName2);
+  })
+
+  $(".meat-click4").click(function(){
+    var toppingName2= $(".meat-click4").val();
+    console.log(toppingName2);
+  })
 
 
 

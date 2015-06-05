@@ -4,7 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
-  <link rel="stylesheet" href="css/lib/normalize.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <link rel="stylesheet"  href="css/styles.css" />
   <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
@@ -28,8 +27,20 @@
     </div>
 
     <div class="row">
-      <div class="col-sm-12 directions">
+      <div class="col-sm-6 directions">
         Directions for ordering here
+      </div>
+
+      <div class="col-sm-6 size">
+        <form class="size-form">
+          <label for="size">What Size Pizza Would you like?</label>
+          <select class="size-options">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+          </select>
+          <button type="submit">Build your pizza!</button>
+        </form>
       </div>
     </div>
 
@@ -75,9 +86,11 @@
           </div>
 
 
-          <div class="topping-click">
-            <span class="pepperoni" value="pepperoni">Pepperoni</span>
-          </div>
+            <option class="meat-click1" value="Pepperoni">Pepperoni</option>
+            <option class="meat-click2" value="Sausage">Sausage</option>
+            <option class="meat-click3" value="Ham">Ham</option>
+            <option class="meat-click4" value="Chicken">Chicken</option>
+
         </div>
         </div>
       </div>
@@ -203,6 +216,9 @@
         </div>
         <div class="order-list-div">
           <ul class="order-list">
+            <li class="pizza-size"></li>
+            <li class="pizza-cost"></li>
+
           </ul>
         </div>
       </div>
