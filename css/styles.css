@@ -39,14 +39,18 @@ body{
   /* Other stuff */
 html,
 
-.meat-content {
+.content{
+  stroke: black;
+  stroke-width: 7;
+  stroke-opacity:.5;
   font: 100 10em/1 Impact;
   margin:20px;
 }
 
+
 svg {
-  text-align:center;
   width:120px;
+  text-align:center;
   margin: 0 auto;
   display: block;
   text-transform: uppercase;
@@ -54,15 +58,10 @@ svg {
 
 .veggie-text {
   fill: url("#p-veggie");
-  stroke: black;
-  stroke-width: 7;
-  stroke-opacity:.5;
 }
 
-
-.veggie-content {
-  font: 100 10em/1 Impact;
-  margin:20px;
+.other-text {
+  fill: url("#p-other");
 }
 
 
@@ -71,9 +70,7 @@ svg {
 
 
 
-
-
-@media (max-width: 1200px){
+@media (max-width: 1000px){
   svg{
     width:90px;
   }
