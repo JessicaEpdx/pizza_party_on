@@ -50,9 +50,58 @@ Pizza.prototype.addToppings = function(whiteSauce, extraCheese, pepperoni, sausa
   this.cost += (this.whiteSauce + this.extraCheese + this.pepperoni + this.sausage + this.ham + this.mushroom + this.spinach + this.pineapple + this.bellPepper);
 };
 
+var hideMeats = function(){
+  $(".meats").hide();
+};
+
+var hideVeggies = function(){
+  $(".veggies").hide();
+};
+
+var hideOthers = function(){
+  $(".others").hide();
+};
+
+var showMeats = function(){
+  $(".meats").slideDown();
+};
+
+var showVeggies = function(){
+  $(".veggies").slideDown();
+};
+
+var showOthers = function(){
+  $(".others").slideDown();
+};
+
 $(document).ready(function(){
 
-  
+  hideMeats();
+  hideVeggies();
+  hideOthers();
+
+
+  $(".meat").click(function(){
+    showMeats();
+    hideVeggies();
+    hideOthers();
+
+  });
+
+  $(".veggie").click(function(){
+    showVeggies();
+    hideMeats();
+    hideOthers();
+
+  });
+
+  $(".other").click(function(){
+    showOthers();
+    hideVeggies();
+    hideMeats();
+
+  });
+
 
 
 

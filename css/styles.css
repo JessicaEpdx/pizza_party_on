@@ -7,10 +7,14 @@ body{
 }
 
 .title-logo{
-  font-size:60px;
-  font-family:indie flower;
+  font-size:80px;
+  font-family:shadows into light;
 }
 
 .logo{
   width:120px;
+}
+
+.toppings{
+  margin:10px;
 }
