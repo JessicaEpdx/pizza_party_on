@@ -1,4 +1,5 @@
 ## PizzaPal ##
+Visit http://www.JessicaEngel.com/pizza to see a working model of PizzaPal
 
 #### Author ####
 
@@ -10,7 +11,6 @@ PizzaPal is designed for web ordering of pizzas. It allows customers to see the 
 
 ### Setup ###
 
-Visit http://www.JessicaEngel.com/pizza to see a working model of PizzaPal
 If you'd like it up on your computer just clone to your desktop and put on your own website server.
 
 ### Debugging ###
