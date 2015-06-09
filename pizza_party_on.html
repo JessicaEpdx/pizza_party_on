@@ -11,7 +11,7 @@
   <link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Megrim' rel='stylesheet' type='text/css'>
 
-  <script src='js/jquery-1.11.3.min.js'></script>
+  <script src="js/jquery-1.11.3.min.js"></script>
   <script src='js/script.js'></script>
 
 </head>
@@ -23,8 +23,8 @@
     <div class="row">
       <div class="col-sm-12 title-logo">
         <img class="logo" src="images/PizzaLogo.jpg" />
-        Pizza Party On
-        <img class="logo" src="images/PizzaLogo2.jpg" />
+        <span class="company-name">Pizza Party On</span>
+        <img class="logo logo2" src="images/PizzaLogo2.jpg" />
 
       </div>
     </div>
@@ -33,7 +33,12 @@
 
       <div class="col-sm-12">
         <div class="directions">
-        Click on individual topping picture to add to your pizza.
+        Click on individual topping picture to add to your pizza. <br />Click Toppings Complete to continue order.</div>
+        <div class="thanks">
+	    Thank you for your order!
+        </div>
+        <div class="quantity-message">
+        How many pizzas would you like?
         </div>
         <form class="size-form">
           <label for="size">What size pizza would you like?</label>
@@ -139,12 +144,12 @@
           <div class="veggies">
 
             <div class="content veggie-content">
-              <svg viewBox="0 0 300 200">
+              <svg viewBox="0 0 250 200">
 
                 <!-- Pattern -->
                 <pattern
                 id="p-veggie"
-                viewBox="30 100 100 200"
+                viewBox="30 100 100 100"
                 patternUnits="userSpaceOnUse"
                 width="300" height="200"
                 x="-70" y="35">
@@ -207,7 +212,7 @@
             <div class="others">
 
               <div class="content other-content">
-                <svg viewBox="0 0 300 200">
+                <svg viewBox="0 0 250 200">
 
                   <!-- Pattern -->
                   <pattern
@@ -276,6 +281,8 @@
             </select>
             <button type="submit">Add</button>
           </form>
+
+          <button type="submit" class="finish-toppings">Toppings Complete</button>
 
           <ul class="order-list">
           </ul>

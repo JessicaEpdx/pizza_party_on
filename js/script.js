@@ -71,17 +71,22 @@ var showOthers = function(){
   $(".others").slideDown();
 };
 
+var hideAtStart = function(){
+  $(".toppings-order-row").hide();
+  $(".directions").hide();
+  $(".thanks").hide();
+  $(".quantity-form").hide();
+  $(".quantity-message").hide();
+  hideMeats();
+  hideVeggies();
+  hideOthers();
 
+};
 
 
 $(document).ready(function(){
 
-  $(".toppings-order-row").hide();
-  $(".directions").hide();
-
-  hideMeats();
-  hideVeggies();
-  hideOthers();
+	hideAtStart();
 
   var newPizza = undefined
 
@@ -198,6 +203,18 @@ $(document).ready(function(){
     addOther(toppingName);
   });
 
+  $(".finish-toppings").click(function(){
+	  $(".quantity-form").show();
+	  $(".finish-toppings").hide();
+	  $(".add-toppings").hide();
+	  $(".order").removeClass("col-sm-3");
+	  $(".directions").hide();
+	  $(".total").addClass("remove-border");
+	  $(".quantity-message").show();
+
+
+  });
+
   $(".quantity-form").submit(function(event){
     event.preventDefault();
     $(".quantity-form").hide();
@@ -205,6 +222,8 @@ $(document).ready(function(){
     newPizza.addQuantity(quantityOfPizzas);
     $(".pizza-cost").text("$"+newPizza.cost);
     $(".pizza-size").text(newPizza.quantity + " " + newPizza.pizzaSize + " Pizza")
+	  $(".quantity-message").hide();
+	  $(".thanks").fadeIn("slow");
   });
 
 

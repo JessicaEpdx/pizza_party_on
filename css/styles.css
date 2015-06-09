@@ -73,8 +73,13 @@ svg {
 
 .order{
   word-spacing: 4px;
+}
+
+.remove-border{
+border-bottom:1px solid white;
 
 }
+
 .order-list{
   font-size:20px;
   list-style:none;
@@ -94,6 +99,16 @@ svg {
 
 }
 
+.thanks{
+	font-size:20px;
+	margin-bottom:30px;
+}
+
+.quantity-message{
+	font-size:20px;
+	margin-bottom:30px;
+}
+
 .top-options img{
   width:60px;
   cursor:pointer;
@@ -106,8 +121,27 @@ svg {
 
 }
 
-@media (max-width: 1000px){
+@media (max-width: 990px){
   svg{
     width:90px;
   }
+
+  .title-logo{
+	  font-size:60px;
+  }
+
+  .title-logo img{
+	  width:100px;
+  }
+
 }
+
+@media only screen
+  and (min-device-width: 330px)
+  and (max-device-width: 400px){
+
+ .logo2{
+	 display:none;
+ }
+
+ }
